@@ -11,14 +11,17 @@
 
     <div class="card">
         <div class="search-container">
-            <input type="text" id="city-input" placeholder="Enter city name..." spellcheck="false">
+            <div class="input-wrapper">
+                <input type="text" id="city-input" placeholder="Enter city name..." autocomplete="off" spellcheck="false">
+                <div id="suggestions-box" class="suggestions"></div>
+            </div>
             <button id="search-btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </div>
 
         <div class="error" style="display: none;">
-            <p>Invalid city name</p>
+            <p id="error-text">Invalid city name</p>
         </div>
 
         <div class="weather-info" style="display: none;">
