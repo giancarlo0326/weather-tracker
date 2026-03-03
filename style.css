@@ -36,20 +36,17 @@ body {
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    position: relative;
-    overflow: visible; /* Allows suggestions to show outside the card */
 }
 
 .search-container {
     width: 100%;
     display: flex;
-    align-items: flex-start;
-    gap: 12px;
+    align-items: center;
+    gap: 10px;
 }
 
 .input-wrapper {
     flex: 1;
-    position: relative;
 }
 
 .search-container input {
@@ -64,31 +61,6 @@ body {
     font-size: 16px;
 }
 
-.suggestions {
-    position: absolute;
-    top: 55px;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    border-radius: 15px;
-    color: #333;
-    text-align: left;
-    max-height: 200px;
-    overflow-y: auto;
-    z-index: 1000;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    display: none;
-}
-
-.suggestion-item {
-    padding: 12px 20px;
-    cursor: pointer;
-    border-bottom: 1px solid #eee;
-    font-size: 14px;
-}
-
-.suggestion-item:hover { background: #f0f0f0; }
-
 .search-container button {
     border: 0;
     outline: 0;
@@ -98,6 +70,15 @@ body {
     height: 48px;
     cursor: pointer;
     color: #333;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container button:hover {
+    background: #fff;
+    transform: scale(1.1);
 }
 
 .weather-icon { width: 140px; margin-top: 15px; }
@@ -112,7 +93,7 @@ body {
 
 .col { display: flex; align-items: center; gap: 10px; text-align: left; }
 .humidity, .wind { font-size: 1.2rem; font-weight: 600; }
-.error { color: #ffbaba; font-size: 14px; margin-top: 15px; text-align: center; }
+.error { color: #ffbaba; font-size: 14px; margin-top: 15px; }
 
 @media screen and (max-width: 400px) {
     .temp { font-size: 3.5rem; }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Tracker</title>
+    <title>SkyCast | Weather Tracker</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -12,9 +12,12 @@
     <div class="card">
         <div class="search-container">
             <div class="input-wrapper">
-                <input type="text" id="city-input" placeholder="Enter city name..." autocomplete="off" spellcheck="false">
-                <div id="suggestions-box" class="suggestions"></div>
+                <input type="text" id="city-input" placeholder="Enter city name..." list="city-list" autocomplete="off" spellcheck="false">
+                <datalist id="city-list"></datalist>
             </div>
+            <button id="location-btn" title="Current Location">
+                <i class="fa-solid fa-location-crosshairs"></i>
+            </button>
             <button id="search-btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
